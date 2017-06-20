@@ -132,7 +132,7 @@ static const char *algo_names[] = {
     [ALGO_SHAVITE3] =    "shavite3",
     [ALGO_BLAKE] =       "blake",
     [ALGO_X11] =         "x11",
-    [ALGO_CRYPTONIGHT] = "cryptonight-light",
+    [ALGO_CRYPTONIGHT] = "cryptolight",
 };
 
 bool opt_debug = false;
