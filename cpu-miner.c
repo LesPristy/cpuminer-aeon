@@ -48,7 +48,7 @@
 #include <windows.h>
 #endif
 
-#define PROGRAM_NAME		"minerd"
+#define PROGRAM_NAME		"cpuminer-aeon"
 #define LP_SCANTIME		60
 #define JSON_BUF_LEN 345
 
@@ -132,7 +132,7 @@ static const char *algo_names[] = {
     [ALGO_SHAVITE3] =    "shavite3",
     [ALGO_BLAKE] =       "blake",
     [ALGO_X11] =         "x11",
-    [ALGO_CRYPTONIGHT] = "cryptonight",
+    [ALGO_CRYPTONIGHT] = "cryptonight-light",
 };
 
 bool opt_debug = false;
