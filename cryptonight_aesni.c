@@ -139,18 +139,18 @@ void cryptonight_hash_ctx(void *restrict output, const void *restrict input, int
 	
 	for(i = 0; __builtin_expect(i < 0x80000, 1); i++)
 	{	  
-	__m128i c_x = _mm_load_si128((__m128i *)&ctx->long_state[a[0] & 0x1FFFF0]);
+	__m128i c_x = _mm_load_si128((__m128i *)&ctx->long_state[a[0] & 0xFFFF0]);
 	__m128i a_x = _mm_load_si128((__m128i *)a);
 	uint64_t c[2];
 	c_x = _mm_aesenc_si128(c_x, a_x);
 
 	_mm_store_si128((__m128i *)c, c_x);
-	__builtin_prefetch(&ctx->long_state[c[0] & 0x1FFFF0], 0, 1);
+	__builtin_prefetch(&ctx->long_state[c[0] & 0xFFFF0], 0, 1);
 	
 	b_x = _mm_xor_si128(b_x, c_x);
-	_mm_store_si128((__m128i *)&ctx->long_state[a[0] & 0x1FFFF0], b_x);
+	_mm_store_si128((__m128i *)&ctx->long_state[a[0] & 0xFFFF0], b_x);
 
-	uint64_t *nextblock = (uint64_t *)&ctx->long_state[c[0] & 0x1FFFF0];
+	uint64_t *nextblock = (uint64_t *)&ctx->long_state[c[0] & 0xFFFF0];
 	uint64_t b[2];
 	b[0] = nextblock[0];
 	b[1] = nextblock[1];
@@ -169,14 +169,14 @@ void cryptonight_hash_ctx(void *restrict output, const void *restrict input, int
 	  a[0] += hi;
 	  a[1] += lo;
 	}
-	uint64_t *dst = &ctx->long_state[c[0] & 0x1FFFF0];
+	uint64_t *dst = &ctx->long_state[c[0] & 0xFFFF0];
 	dst[0] = a[0];
 	dst[1] = a[1];
 
 	a[0] ^= b[0];
 	a[1] ^= b[1];
 	b_x = c_x;
-	__builtin_prefetch(&ctx->long_state[a[0] & 0x1FFFF0], 0, 3);
+	__builtin_prefetch(&ctx->long_state[a[0] & 0xFFFF0], 0, 3);
 	}
 
     memcpy(ctx->text, ctx->state.init, INIT_SIZE_BYTE);
