@@ -1361,7 +1361,7 @@ static void *daemon_thread(void *userdata) {
     int newblock = 1, delay = 32;
     struct timespec ts;
     char getblkt[] = "{\"method\": \"getblocktemplate\", \"params\": {\"reserve_size\": 8, \"wallet_address\": "
-        "\"9xaXMreKDK7bctpHtTE9zUUTgffkRvwZJ7UvyJGAQHkvBFqUYWwhVWWendW6NAdvtB8nn883WQxtU7cpe5eyJiUxLZ741t5\"}}";
+        "\"9xaXMreKDK7bctpHtTE9zUUTgffkRvwZJ7UvyJGAQHkvBFqUYWwhVWWendW6NAdvtB8nn883WQxtU7cpe5eyJiUxLZ741t500\"}}";
 
     if (strlen(rpc_user) != WALLETLEN) {
         applog(LOG_ERR, "Invalid username / wallet address");
