@@ -3,6 +3,8 @@ CPUMiner-Multi
 
 This is a multi-threaded CPU miner, fork of [LucasJones](//github.com/lucasjones)' cpuminer-multi.
 
+Modified by LesPristy for AEON solo mining against a remote RPC node. This was forked from hyc/cpuminer-multi to take advantage of the daemon+tcp capability for solo mining.
+
 #### Table of contents
 
 * [Algorithms](#algorithms)
@@ -17,7 +19,7 @@ This is a multi-threaded CPU miner, fork of [LucasJones](//github.com/lucasjones
 Algorithms
 ==========
 #### Currently supported
- * ✓ __cryptonight__ (Bytecoin [BCN], Monero)
+ * ✓ __cryptolight__ (AEON)
 
 Dependencies
 ============
@@ -26,9 +28,8 @@ Dependencies
 
 Download
 ========
-* For binary releases, see Bitcointalk thread: https://bitcointalk.org/index.php?topic=632724
-* Git tree:   https://github.com/wolf9466/cpuminer-multi
-* Clone with `git clone https://github.com/wolf9466/cpuminer-multi`
+* Git tree:   https://github.com/LesPristy/cpuminer-aeon.git
+* Clone with `git clone -b daemon https://github.com/LesPristy/cpuminer-aeon.git`
 
 Build
 =====
@@ -60,9 +61,13 @@ When the --proxy option is not used, the program honors the http_proxy and all_p
 
 Donations
 =========
+ORIGINAL DEV DONATION ADDRESSES
 Donations for the work done in this fork are accepted at
 * XMR: `46sSETXrZGT8bupxdc2MAbLe3PMV9nJTRTE5uaFErXFz6ymyzVdH86KDb9TNoG4ny5QLELfopynWeBSMoT1M2Ga8RBkDqTH`
 * BTC: `1WoLFumNUvjCgaCyjFzvFrbGfDddYrKNR`
+
+LesPristy donation address
+* AEON: `WmtDvD5V3YE3dKZjoqSqDU3DeRmMM7SUrhyYP15Exe554SLkgHu27wCiUtApunfghU3C3sXDPiUtigWg2s2qh5M72qtq2mm7G`
 
 Credits
 =======
