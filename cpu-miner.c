@@ -1352,7 +1352,7 @@ static void *longpoll_thread(void *userdata) {
 
 static const char getblkc[] = "{\"method\": \"getblockcount\"}";
 
-#define WALLETLEN	95
+#define WALLETLEN	97
 
 static void *daemon_thread(void *userdata) {
     struct thr_info *mythr = userdata;
