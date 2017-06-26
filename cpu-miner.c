@@ -578,6 +578,8 @@ static bool submit_upstream_work(CURL *curl, struct work *work) {
             applog(LOG_DEBUG, "DEBUG: stale work detected, discarding");
         return true;
     }
+    
+    applog(LOG_INFO, "Executing submit_upstream_work");	
 
     if (have_stratum) {
         uint32_t ntime, nonce;
